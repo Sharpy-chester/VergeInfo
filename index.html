@@ -45,30 +45,12 @@
                 height: 800px;
                 
             }
-            #footer{
-                background-color: rgba(31, 48, 56, 1);
-                height: 300px;
-                box-shadow: 0 4px 50px 10px;
-                margin-top: 300px;
-            }
+
+            
             .bgImage{
                opacity: 0.6; 
             }
-            .jumbotron{
-                width: 60%;
-                padding: 40px;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 20px;
-                box-shadow: 0 4px 50px 10px;
-                background-color: rgba(31, 48, 56, 0.8);
-/*
-                border-style: solid;
-                border-color: grey;
-                border-width: 3px;
-*/
-            }
+            
             h1{
 /*                font-family: Verdana, Geneva, sans-serif;*/
                 
@@ -84,9 +66,12 @@
                 text-decoration: none;
                 text-decoration-line: none; 
                 color: white;
+                font-size: 15px;
             }
+
             p{
                 color: white;
+                padding: 0px 150px;
             }
             button{
                 height: 50px;
@@ -101,7 +86,7 @@
                 
             }
             #quotes{
-                padding: 30px;
+                padding: 30px 150px;
             }
             .first{
                 top: 100px;
@@ -138,6 +123,7 @@
             }
             
             
+            
             .nav{
                 float: right;
             }
@@ -166,12 +152,14 @@
                 box-shadow: 0 0px 10px 5px;
                 position: sticky;
                 top: 0;
+                height: 65px;
                 
             }
             header:after{
                 content: "";
                 display: table;
                 clear: both;
+                
             }
             nav a:hover{
                 text-decoration: none;
@@ -181,79 +169,116 @@
             ul li{
                 list-style-type: none;
                 display: inline-block;
-                padding: 30px 20px;
+                padding: 25px 20px;
             }
+            
+            
+            .article {
+                
+            }
+
+            .jumbotron{
+                width: 60%;
+                padding: 40px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                box-shadow: 0 4px 50px 10px;
+                background-color: rgba(31, 48, 56, 0.8);
+            }
+            footer{
+                background-color: rgba(31, 48, 56, 1);
+                height: 300px;
+                box-shadow: 0 4px 50px 10px;
+                margin-top: 100px;
+            }
+            
         </style>
     </head>
 
     <body>
-        
         <title>Verge Info</title>
+        
+        
         <header>
             <div class="container">
-                <a href="#"><img src="Assets/vergelogo.png" class="logo"></a>
+                <a href="#"><img style="padding-top: 15px" src="Assets/vergelogo1.png" class="logo"></a>
                 <nav>
                     <ul class="nav" >
-                        <li><a href="#">What is Verge</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Why Choose Verge</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Useful Guides</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#nav1" >What is Verge</a></li>
+                        <li><a href="#nav2" >Features</a></li>
+                        <li><a href="#nav3" >Why Choose Verge</a></li>
+                        <li><a href="#nav4" >Community</a></li>
+                        <li><a href="#nav5" >Useful Guides</a></li>
+                        <li><a href="#nav6" >FAQ</a></li>
+                        <li><a href="#" >News (WIP)</a></li>
                     </ul>
                 </nav>
-            </div>        
+            </div>
         </header>
-        
+
         <div class="content">
             <div id="sec1" class="section"> 
                 <br>
-                <div class="jumbotron">
+                <div class="jumbotron" id="nav1">
                     <h1>What is Verge?</h1>
-                    <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and<br> most importantly, privacy.</p>
+                    <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and most importantly, privacy.</p>
                     <br>
-                     <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+                    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+                    <!-- hitwebcounter Code START -->
+ 
+<!--
+                    <ul style="margin-bottom: 50px">
+                        <li><button><p>Features</p></button></li>
+                        <li><button><p>Community</p></button></li>
+                        <li><button><p>Team</p></button></li>
+                    </ul>
+-->
+                    
                 </div>
             </div>
+           
+
             
-            <div id="sec3" class="section">
+            
                 <br>
                 <br>
-               <div class="jumbotron">
+                <div class="jumbotron" id="nav2">
                     <h1>Features</h1>
-                    <p>Verge has many built-in features with many more to come this year. Heres a quick run-down of the main features<br> and what they do.</p>
+                    <p>Verge has many built-in features with many more to come this year. Heres a quick run-down of the main features and what they do.</p>
                     <br>
                     <strong>Tor and i2p</strong>
                     <br>
-                    <p>Tor (The Onion Router) is a service that allows you to hide your identity by moving your traffic between many Tor<br> servers and encrypting your data. It cannot be traced back to you as they would see the data originating from<br> one of the Tor servers</p>
+                    <p>Tor (The Onion Router) is a service that allows you to hide your identity by moving your traffic between many Tor servers and encrypting your data. It cannot be traced back to you as they would see the data originating from one of the Tor servers</p>
                     
                     <strong>SPV</strong>
                     <br>
-                    <p>SPV stands for "Simple Payment Verification" which is technology that makes transactions take just 5-10 seconds.<br> It does this by instead of downloading a whole block, it verifies if a transaction is in a block and only downloads<br> block headers which are much smaller than full blocks.</p>
+                    <p>SPV stands for "Simple Payment Verification" which is technology that makes transactions take just 5-10 seconds. It does this by instead of downloading a whole block, it verifies if a transaction is in a block and only downloads block headers which are much smaller than full blocks.</p>
                     
                     <strong>Wraith Protocol</strong>
                     <br>
-                    <p>Wraith Protocol allows for fast, secure transactions by using technology called stealth addresses. This allows<br> desired transactions go to seperate stealth addresses which sends the transaction to the reciever. This transaction<br> is hidden on the ledger and impossible to trace.</p>
+                    <p>Wraith Protocol allows for fast, secure transactions by using technology called stealth addresses. This allows desired transactions go to seperate stealth addresses which sends the transaction to the reciever. This transaction is hidden on the ledger and impossible to trace.</p>
                     
                     <strong>Atomic Swaps</strong>
                     <br>
-                    <p>Atomic Swaps allows Verge to be used in DEX's (Decentralised Exchanges) which allows you to trade between Verge<br> and other coins that have atomic swaps enabled, on the blockchain. This means that a company like Bittrex or CoinBase <br>dont own your coins but are instead stored in a decentralised exchange like crypto-bridge.</p>
+                    <p>Atomic Swaps allows Verge to be used in DEX's (Decentralised Exchanges) which allows you to trade between Verge, and other coins that have atomic swaps enabled, on the blockchain. This means that a company like Bittrex or CoinBase dont own your coins but are instead stored in a decentralised exchange like crypto-bridge.</p>
                     
                     <strong>Mobile Security</strong>
                     <br>
-                    <p>Verge is the first and only cryptocurrency to have an Android wallet with Tor integrated. This allows for IP<br> masking and anonymity on the move. An i2p Androd wallet is expected in Q1 2018.</p>
+                    <p>Verge is the first and only cryptocurrency to have an Android wallet with Tor integrated. This allows for IP masking and anonymity on the move. An i2p Androd wallet is expected in Q1 2018.</p>
                     <br>
                     
                     <h1>Coming Soon</h1>
                     
                      <strong>RingCT</strong>
                     <br>
-                    <p>RingCT allows you to conceal how much you are sending over the blockchain. With ringCT enabled, when you<br> send a transaction, more than one transaction is sent out of your address. These contain other funds from your<br> address and act as dummy transactions to hide how much is actually being sent. The dummy transactions are<br> then sent back to your address and the actual transactions are sent on to the reciever.</p>
+                    <p>RingCT allows you to conceal how much you are sending over the blockchain. With ringCT enabled, when you send a transaction, more than one transaction is sent out of your address. These contain other funds from your address and act as dummy transactions to hide how much is actually being sent. The dummy transactions are then sent back to your address and the actual transactions are sent on to the reciever.</p>
                     <br>
                     
                     <strong>RSK Contracts</strong>
                     <br>
-                    <p>RSK contracts allows Verge to utilise smart contracts on the RSK blockchain. This will be enabled Q1 this year<br> and allows Verge to handle 1000 transactions per minute which is 10 times faster than what it is now.  Below<br> is an image explaining what a Smart Contract is. </p>
+                    <p>RSK contracts allows Verge to utilise smart contracts on the RSK blockchain. This will be enabled Q1 this year and also allows Verge to handle 2000 transactions per minute which is 20 times faster than what it is now.  Below is an image explaining what a Smart Contract is. </p>
                     <br>
                     <img style="width: 600px" src="Assets/contract.png">
                 </div>
@@ -261,12 +286,12 @@
                 <br>
                 <br>
                 <br>
-                <div class="jumbotron">
+                <div class="jumbotron" id="nav3">
                     <h1>Why Choose Verge?</h1>
                     <table style="border-collapse: collapse">
                         <tr>
                             <td style="border-right-style: solid">Privacy Coins</td>
-                            <td><strong style="text-decoration: underline"><img width="50px" src="Assets/Verge.png"></strong></td>
+                            <td><strong style="text-decoration: underline"><img width="50px" src="Assets/verge.png"></strong></td>
                             <td><strong style="text-decoration: underline"><img width="50px" src="Assets/monero.svg"></strong></td>
                             <td><strong style="text-decoration: underline"><img width="50px" src="Assets/zcash.png"></strong></td>
                             <td><strong style="text-decoration: underline"><img width="50px" src="Assets/dash.png"></strong></td>
@@ -302,7 +327,7 @@
                             <td>60</td>
                         </tr>
                         <tr>
-                            <td style="border-right-style: solid">Low Fees</td>
+                            <td style="border-right-style: solid">Super Low Fees</td>
                             <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
                             <td><img src="Assets/No.png" style="width: 30px"></td>
                             <td><img src="Assets/Yes.png" style="width: 30px"></td>
@@ -380,12 +405,26 @@
                         </tr>
                     
                     </table>
+                
                 </div>
                 <br>
                 <br>
-                <div class="jumbotron"> 
+                <br>
+                <br>
+<!--
+                <div class="jumbotron" id="">
+                    <h1>Mining</h1>
+                    <p> </p>
+            
+                </div>
+-->
+            
+            <br>
+            <br>
+            <br>
+                <div class="jumbotron" id="nav4"> 
                     <h1>Community</h1>
-                    <p>The Verge community is present on most social media platforms and the devs are very active within these. The marketing<br> team is currently situated on Discord which has a great community and many of the main Verge developers on it.</p>
+                    <p>The Verge community is present on most social media platforms and the devs are very active on most. The marketing team is currently situated on Discord which has a great community and many of the Verge developers on it.</p>
                     <ul class="icons">
                         <li><a href="https://www.facebook.com/VERGEcurrency/"><img style="width: 100px" src="Assets/facebook.png"></a></li>
                         <li><a href="https://twitter.com/vergecurrency"><img style="width: 100px" src="Assets/twitter.png"></a></li>
@@ -398,7 +437,7 @@
                 <br>
                 <br>
                 <br>
-                <div class="jumbotron"> 
+                <div class="jumbotron" id="nav5"> 
                     <h1>Useful Guides</h1>
                     <p><a style="text-decoration: underline" href="https://warmwires.blog/2018/01/19/windows-electrum-wallet-setup/">Warmwires's</a> Tor Electrum wallet guide for windows is up to date and easy to follow.</p>
                     <br>
@@ -406,42 +445,46 @@
                     <br>
                     <p><a style="text-decoration: underline" href="https://www.youtube.com/watch?v=R48e1mp_5qA&feature=youtu.be">XVG Monks's</a> MAC High Sierra wallet set-up video is a great video tutorial for MAC users.</p>
                     <br>
-                    <p><a style="text-decoration: underline" href="Assets/StealthGuide.pdf">Akashiro's</a> guide for setting up and using stealth addresses shows you how to use stealth and how to check whether<br> your stealth addresses are working as intended.</p>
+                    <p><a style="text-decoration: underline" href="Assets/StealthGuide.pdf">Akashiro's</a> guide for setting up and using stealth addresses shows you how to use stealth and how to check whether your stealth addresses are working as intended.</p>
                     <br>
                     <p><a style="text-decoration: underline" href="Assets/AndroidWalletguide.pdf">Akashiro</a> has yet another guide, this one on how to install and set up the Android Tor wallet.</p>
                     <br>
-                    <p><a style="text-decoration: underline" href="https://medium.com/@SharpyChester/how-to-buy-verge-xvg-3fcc725bcd">Here's my guide</a> for buying Verge, aimed at people who dont own any CryptoCurrency yet.</p>
+                    <p><a style="text-decoration: underline" href="https://medium.com/@SharpyChester/how-to-buy-verge-xvg-3fcc725bcd">Here's my guide</a> for buying Verge, aimed at people who dont have any CryptoCurrency yet.</p>
                 </div>
                 <br> 
                 <br>
                 <br>
                 <br>
-                <div class="jumbotron">
+                <div class="jumbotron" id="nav6">
                     <h1>FAQ's</h1>
-                    <strong style="text-decoration: underline">Q: What is the best Verge exchange.</strong>
+                    <strong style="text-decoration: underline">Q: What are the best Verge exchanges?</strong>
                     <p>A: Bittrex and Binance are the most popular and most reliable exchanges for Verge.</p>
                     <strong style="text-decoration: underline">Q: How do I use Atomic Swaps?</strong>
-                    <p>A: There are many DEX's (Decentralised Exchanges) like crypto-bridge that allow you to use<br> Atomic Swaps with Verge. </p>
+                    <p>A: There are many DEX's (Decentralised Exchanges) like crypto-bridge that allow you to use Atomic Swaps with Verge. </p>
                     <strong style="text-decoration: underline">Q: Is Verge a Dogecoin fork?</strong>
                     <p>A: No. While Verge was called Dogecoin Dark, it was actually forked from Bitcoin/Peercoin.</p>
-                   
+                    
+                
                 </div>
                 <br> 
                 <br>
                 <br>
                 <br>
-                <div  id="sec2" class="section">
+                <div  id="nav6" class="jumbotron">
                 
-                    <img class="img" src="Assets/Verge.png">
-                    <br>
+                    
+                    <h1>Articles</h1>
                
-                    <h2 id="quotes" class="first"><i>"The currency is virtually untraceable and the users of Verge can make instant anonymous transactions."</i> - The Sun</h2>
+                    <p id="quotes" class="first"><i>"The currency is virtually untraceable and the users of Verge can make instant anonymous transactions."</i> - <a style="text-decoration: underline" href="https://www.thesun.co.uk/money/5180704/verge-price-today-buy-xvg-value-bitcoin/">The Sun</a></p>
                     
-                    <h2 id="quotes"><i>"You could buy yourself the full collection of My Little Pony that you have always wanted and no one would ever find out"<br></i> - Thecompletecoinguide.com</h2>
+                    <p id="quotes"><i>"You could buy yourself the full collection of My Little Pony that you have always wanted and no one would ever find out"</i> - <a style="text-decoration: underline" href="http://thecompletecoinguide.com/verge-it-was-us-against-the-world/">Thecompletecoinguide.com</a></p>
                     
-                    <h2 id="quotes"><i>"With significantly faster transaction times and capable of handling a vastly higher number of transactions per second, not<br>to mention the increased privacy, the Verge platform is ready for mass adoption."</i> - Finance.yahoo.com</h2>
+                    <p id="quotes"><i>"With significantly faster transaction times and capable of handling a vastly higher number of transactions per second, not to mention the increased privacy, the Verge platform is ready for mass adoption."</i> - <a style="text-decoration: underline" href="https://uk.finance.yahoo.com/news/buy-verge-xvg-ultimate-guide-114641773.html">Finance.yahoo.com</a></p>
             </div>
-            
+            <footer>
+                <p style="text-align: center; padding-top: 50px;">I have made this website on my own time without being paid.<br><br> If you want to support me and this website, please donate to the addresses below.<br><br>XVG: DS7vhhycfzsLHFoQJ4p4CwjgXoJxGKG4eX 
+                <br><br>ETH: 0x5d9030bc44dde326e3d80884711fd10d9e336e78<br><br>BTC: 1MZNU3y4H6AtFV3iHHRWz1UjkhpHck71kg</p>
+            </footer>
             
         </div>
       
