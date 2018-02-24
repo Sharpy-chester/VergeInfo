@@ -1,498 +1,243 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" href="Assets/Verge.png" type="image/png" sizes="16x16">
-        <style>
-            html{
-                overflow-x: hidden;
-            }
-            body{
-                background-image: url(Assets/Background2.jpg);
-                background-size: 100%;
-                margin: 0;
-                width: 100%;
-                background-attachment: fixed;
-                background-color: rgba(28,50,63,0.7);
-            }
-            @font-face {
-                font-family: testing;
-                src: url(AvenirNext-Medium.woff);
-            }
-            * {
-                font-family: testing;
-                
-            }
-            .section {
-                position: static;
-                min-height: 300px;
-                transform-style: inherit;
-                
-            }
-            #sec1{
-                height: 500px;
-                
-            }
-            #sec2{
-/*                background-image: url(Assets/concert.png);*/
-                background-color: rgba(31, 48, 56, 0.9);
-                
-                background-repeat: no-repeat;
-                height: 600px;
-                box-shadow: 0 4px 50px 10px;
-                
-            }
-            #sec3{
-                height: 800px;
-                
-            }
 
-            
-            .bgImage{
-               opacity: 0.6; 
-            }
-            
-            h1{
-/*                font-family: Verdana, Geneva, sans-serif;*/
-                
-                color: white;
-            }
-            
-            iframe{
-                
-                box-shadow: 0 4px 50px 10px;
-                
-            }
-            a{
-                text-decoration: none;
-                text-decoration-line: none; 
-                color: white;
-                font-size: 15px;
-            }
+<head>
+    <link rel="icon" href="Assets/Verge.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-            p{
-                color: white;
-                padding: 0px 150px;
-            }
-            button{
-                height: 50px;
-                width: 200px;
-                background-color: dodgerblue;
-                border-style: none;
-                box-shadow: 0 0px 50px 1px;
-                
-            }
-            h2{
-                color: white;
-                
-            }
-            #quotes{
-                padding: 30px 150px;
-            }
-            .first{
-                top: 100px;
-            }
-            strong{
-                color: white;
-            }
-            .img{
-                float: right;
-                width: 520px;
-            }
-            .icons{
-                margin-top: -20px;
-                display: inline-block
-            }
-            td{
-                color: white;
-                padding-left: 20px;
-                padding-right: 20px;
-                
-            }
-            tr{
-                
-                color: white;
-            }
-            table{
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .coinmarketcap-currency-widget{
-                width: 33%;
-                color: white;
-                margin: 0 auto;
-            }
-            
-            
-            
-            .nav{
-                float: right;
-            }
-            .container{
-                width: 95%;
-                margin: 0 auto;
-            }
-            nav ul{
-                margin: 0;
-                padding: 0;
-            }
-            nav li{
-                display: inline-block;
-                padding-left: 20px;
-                padding-right: 20px;
-                font-size: 15px;
-                padding-top: 30px;
-                position: relative;                
-            }
-            .logo{
-                float: left;
-                padding: 20px 0;
-            }
-            header{
-                background-color: rgba(31, 48, 56, 0.9);
-                box-shadow: 0 0px 10px 5px;
-                position: sticky;
-                top: 0;
-                height: 65px;
-                
-            }
-            header:after{
-                content: "";
-                display: table;
-                clear: both;
-                
-            }
-            nav a:hover{
-                text-decoration: none;
-                color: #08b4e0;
-                transition: all ease-in-out 200ms;
-            }
-            ul li{
-                list-style-type: none;
-                display: inline-block;
-                padding: 25px 20px;
-            }
-            
-            
-            .article {
-                
-            }
-
-            .jumbotron{
-                width: 60%;
-                padding: 40px;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 20px;
-                box-shadow: 0 4px 50px 10px;
-                background-color: rgba(31, 48, 56, 0.8);
-            }
-            footer{
-                background-color: rgba(31, 48, 56, 1);
-                height: 300px;
-                box-shadow: 0 4px 50px 10px;
-                margin-top: 100px;
-            }
-            
-        </style>
-    </head>
-
-    <body>
-        <title>Verge Info</title>
-        
-        
-        <header>
-            <div class="container">
-                <a href="#"><img style="padding-top: 15px" src="Assets/vergelogo1.png" class="logo"></a>
-                <nav>
-                    <ul class="nav" >
-                        <li><a href="#nav1" >What is Verge</a></li>
-                        <li><a href="#nav2" >Features</a></li>
-                        <li><a href="#nav3" >Why Choose Verge</a></li>
-                        <li><a href="#nav4" >Community</a></li>
-                        <li><a href="#nav5" >Useful Guides</a></li>
-                        <li><a href="#nav6" >FAQ</a></li>
-                        <li><a href="#" >News (WIP)</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <div class="content">
-            <div id="sec1" class="section"> 
-                <br>
-                <div class="jumbotron" id="nav1">
-                    <h1>What is Verge?</h1>
-                    <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and most importantly, privacy. This is an unofficial website devoted to helping people understand what Verge is and why its so important in todays society.</p>
-                    <br>
-                    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
-                    <!-- hitwebcounter Code START -->
- 
-<!--
-                    <ul style="margin-bottom: 50px">
-                        <li><button><p>Features</p></button></li>
-                        <li><button><p>Community</p></button></li>
-                        <li><button><p>Team</p></button></li>
-                    </ul>
--->
-                    
-                </div>
-            </div>
-           
-
-            
-            
-                <br>
-                <br>
-                <div class="jumbotron" id="nav2">
-                    <h1>Features</h1>
-                    <p>Verge has many built-in features with many more to come this year. Heres a quick run-down of the main features and what they do.</p>
-                    <br>
-                    <strong>Tor and i2p</strong>
-                    <br>
-                    <p>Tor (The Onion Router) is a service that allows you to hide your identity by moving your traffic between many Tor servers and encrypting your data. It cannot be traced back to you as they would see the data originating from one of the Tor servers.</p>
-                    
-                    <strong>SPV</strong>
-                    <br>
-                    <p>SPV stands for "Simple Payment Verification" which is technology that makes transactions take just 5-10 seconds on average. It does this by instead of downloading a whole block, it verifies if a transaction is in a block and only has to download block headers which are much smaller than full blocks.</p>
-                    
-                    <strong>Wraith Protocol</strong>
-                    <br>
-                    <p>Wraith Protocol allows for fast, secure transactions by using technology called stealth addresses. This allows desired transactions go to seperate stealth addresses which sends the transaction to the reciever. This transaction is hidden on the ledger and impossible to trace. With Wraith Protocol, this functionality can be turned on and off for either private or transparent transactions.</p>
-                    
-                    <strong>Atomic Swaps</strong>
-                    <br>
-                    <p>Atomic Swaps allow Verge to be used in DEX's (Decentralised Exchanges) which let you to trade between Verge, and other coins that have atomic swaps enabled, on a blockchain. This means that a company like Bittrex or CoinBase dont own your coins but are instead stored in a decentralised exchange like crypto-bridge.</p>
-                    
-                    <strong>Mobile Security</strong>
-                    <br>
-                    <p>Verge is the first and only cryptocurrency to have an Android wallet with Tor integrated. This allows for IP masking and anonymity on the move. An i2p Androd wallet is expected in Q1 2018.</p>
-                    <br>
-                    
-                    <h1>Coming Soon</h1>
-                    
-                     <strong>RingCT</strong>
-                    <br>
-                    <p>RingCT allows you to conceal how much you are sending over the blockchain. With ringCT enabled, when you send a transaction, more than one transaction is sent out of your address. These contain other funds from your address and act as dummy transactions to hide how much is actually being sent. The dummy transactions are then sent back to your address and the actual transaction is sent on to the reciever.</p>
-                    <br>
-                    
-                    <strong>RSK Smart Contracts</strong>
-                    <br>
-                    <p>RSK smart contracts allow Verge to utilise smart contracts on the blockchain. This will be enabled in Q1 this year and also allows Verge to handle 2000 transactions per second which is 20 times faster than what it is now.  Below is an image which may help you understand what a Smart Contract is. </p>
-                    <br>
-                    <img style="width: 600px" src="Assets/contract.png">
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="jumbotron" id="nav3">
-                    <h1>Why Choose Verge?</h1>
-                    <table style="border-collapse: collapse">
-                        <tr>
-                            <td style="border-right-style: solid">Privacy Coins</td>
-                            <td><strong style="text-decoration: underline"><img width="50px" src="Assets/Verge.png"></strong></td>
-                            <td><strong style="text-decoration: underline"><img width="50px" src="Assets/monero.svg"></strong></td>
-                            <td><strong style="text-decoration: underline"><img width="50px" src="Assets/zcash.png"></strong></td>
-                            <td><strong style="text-decoration: underline"><img width="50px" src="Assets/dash.png"></strong></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Symbol</td>
-                            <td>XVG</td>
-                            <td>XMR</td>
-                            <td>ZEC</td>
-                            <td>DASH</td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Max Supply</td>
-                            <td>16.5 Billion</td>
-                            <td>Infinite</td>
-                            <td>21 Million</td>
-                            <td>22 Million</td>
-                        </tr>
-                       
-                        <tr>
-                            <td style="border-right-style: solid">Block Times</td>
-                            <td style="color: green">30 seconds</td>
-                            <td>2 Minutes</td>
-                            <td>2.5 Minutes</td>
-                            <td>2.5 Minutes</td>
-                        </tr>
-                        
-                        <tr>
-                            <td style="border-right-style: solid">Transaction Capability (per second)</td>
-                            <td style="color: green">100 (2000 with RSK)</td>
-                            <td>Adaptive</td>
-                            <td>7-27</td>
-                            <td>60</td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Low Fees</td>
-                            <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Specialised Transaction Technology</td>
-                            <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Dedicated Tip Bots</td>
-                            <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                        </tr>
-                         <tr>
-                            <td style="border-right-style: solid">Decentralised</td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">IP Masking</td>
-                            <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Multiple Mining Algorithms</td>
-                            <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Stealth Addresses</td>
-                            <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Atomic Swaps</td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Mobile Privacy</td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">Smart Contracts</td>
-                            <td style="color: green"><img src="Assets/soon1.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right-style: solid">RingCT's</td>
-                            <td style="color: green"><img src="Assets/soon1.png" style="width: 30px"></td>
-                            <td><img src="Assets/Yes.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                            <td><img src="Assets/No.png" style="width: 30px"></td>
-                        </tr>
-                    
-                    </table>
-                
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-<!--
-                <div class="jumbotron" id="">
-                    <h1>Mining</h1>
-                    <p> </p>
-            
-                </div>
--->
-            
-            <br>
-            <br>
-            <br>
-                <div class="jumbotron" id="nav4"> 
-                    <h1>Community</h1>
-                    <p>The Verge community is present on most social media platforms and the devs are very active on most. The marketing team is currently situated on Discord which is one of the best places to talk to the community and the team.</p>
-                    <ul class="icons">
-                        <li><a href="https://www.facebook.com/VERGEcurrency/"><img style="width: 100px" src="Assets/facebook.png"></a></li>
-                        <li><a href="https://twitter.com/vergecurrency"><img style="width: 100px" src="Assets/twitter.png"></a></li>
-                        <li><a href="https://www.reddit.com/r/vergecurrency/"><img style="width: 100px" src="Assets/Reddit.png"></a></li>
-                        <li><a href="https://discordapp.com/invite/vergecurrency"><img style="width: 100px" src="Assets/discord.png"></a></li>
-                        <li><a href="https://t.me/VERGExvg"><img style="width: 100px" src="Assets/telegram.png"></a></li>
-                    </ul>
-                </div>
-                <br> 
-                <br>
-                <br>
-                <br>
-                <div class="jumbotron" id="nav5"> 
-                    <h1>Useful Guides</h1>
-                    <p><a style="text-decoration: underline" href="https://warmwires.blog/2018/01/19/windows-electrum-wallet-setup/">Warmwires's</a> Tor Electrum wallet guide for windows is up to date and easy to follow.</p>
-                    <br>
-                    <p><a style="text-decoration: underline" href="Assets/wraithWalletGuide.pdf">Akashiro's</a> 4.0.1 QT wallet guide makes the wallet easy and quick to set up properly.</p>
-                    <br>
-                    <p><a style="text-decoration: underline" href="https://www.youtube.com/watch?v=R48e1mp_5qA&feature=youtu.be">XVG Monks's</a> MAC High Sierra wallet set-up video is a great video tutorial for MAC users.</p>
-                    <br>
-                    <p><a style="text-decoration: underline" href="Assets/StealthGuide.pdf">Akashiro's</a> guide for setting up and using stealth addresses shows you how to use stealth and how to check whether your stealth addresses are working as intended.</p>
-                    <br>
-                    <p><a style="text-decoration: underline" href="Assets/AndroidWalletguide.pdf">Akashiro</a> has yet another guide, this one on how to install and set up the Android Tor wallet.</p>
-                    
-                </div>
-                <br> 
-                <br>
-                <br>
-                <br>
-                <div class="jumbotron" id="nav6">
-                    <h1>FAQ's</h1>
-                    <strong style="text-decoration: underline">Q: What are the best Verge exchanges?</strong>
-                    <p>A: Bittrex and Binance are the most popular and most reliable exchanges for Verge.</p>
-                    <strong style="text-decoration: underline">Q: How do I use Atomic Swaps?</strong>
-                    <p>A: There are many DEX's (Decentralised Exchanges) like crypto-bridge that allow you to use Atomic Swaps with Verge. </p>
-                    <strong style="text-decoration: underline">Q: Is Verge a Dogecoin fork?</strong>
-                    <p>A: No. While Verge was called Dogecoin Dark, it was actually forked from Bitcoin/Peercoin.</p>
-                    
-                
-                </div>
-                <br> 
-                <br>
-                <br>
-                <br>
-                <div  id="nav6" class="jumbotron">
-                
-                    
-                    <h1>Articles</h1>
-               
-                    <p id="quotes" class="first"><i>"The currency is virtually untraceable and the users of Verge can make instant anonymous transactions."</i> - <a style="text-decoration: underline" href="https://www.thesun.co.uk/money/5180704/verge-price-today-buy-xvg-value-bitcoin/">The Sun</a></p>
-                    
-                    <p id="quotes"><i>"You could buy yourself the full collection of My Little Pony that you have always wanted and no one would ever find out"</i> - <a style="text-decoration: underline" href="http://thecompletecoinguide.com/verge-it-was-us-against-the-world/">Thecompletecoinguide.com</a></p>
-                    
-                    <p id="quotes"><i>"With significantly faster transaction times and capable of handling a vastly higher number of transactions per second, not to mention the increased privacy, the Verge platform is ready for mass adoption."</i> - <a style="text-decoration: underline" href="https://uk.finance.yahoo.com/news/buy-verge-xvg-ultimate-guide-114641773.html">Finance.yahoo.com</a></p>
-            </div>
-            <footer>
-                <p style="text-align: center; padding-top: 50px;">I have made this website in my own time, for free.<br><br> If you want to support me and this website, please donate to the addresses below.<br><br>XVG: DS7vhhycfzsLHFoQJ4p4CwjgXoJxGKG4eX 
-                <br><br>ETH: 0x5d9030bc44dde326e3d80884711fd10d9e336e78<br><br>BTC: 1MZNU3y4H6AtFV3iHHRWz1UjkhpHck71kg</p>
-            </footer>
-            
+<body>
+    <title>Verge Info</title>
+    <header>
+        <div class="container">
+            <a href="#"><img style="padding-top: 15px" src="Assets/vergelogo1.png" class="logo"></a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#nav1">What is Verge</a></li>
+                    <li><a href="#nav2">Features</a></li>
+                    <li><a href="#nav3">Why Choose Verge</a></li>
+                    <li><a href="#nav4">Community</a></li>
+                    <li><a href="#nav5">Useful Guides</a></li>
+                    <li><a href="#nav6">FAQ</a></li>
+                    <li><a href="#">News (WIP)</a></li>
+                </ul>
+            </nav>
         </div>
-      
-    </body>
+    </header>
+    <div class="content">
+        <div class="jumbotron" id="nav1">
+            <h1>What is Verge?</h1>
+            <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and most importantly, privacy. This is an unofficial website devoted to helping people understand what Verge is and why its so important in todays society.</p>
+            <br>
+            <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+            <div style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+        </div>
+        <div class="jumbotron" id="nav2">
+            <h1>Features</h1>
+            <p>Verge has many built-in features with many more to come this year. Heres a quick run-down of the main features and what they do.</p>
+            <br>
+            <strong>Tor and i2p</strong>
+            <br>
+            <p>Tor (The Onion Router) is a service that allows you to hide your identity by moving your traffic between many Tor servers and encrypting your data. It cannot be traced back to you as they would see the data originating from one of the Tor servers.</p>
+            <strong>SPV</strong>
+            <br>
+            <p>SPV stands for "Simple Payment Verification" which is technology that makes transactions take just 5-10 seconds on average. It does this by instead of downloading a whole block, it verifies if a transaction is in a block and only has to download block headers which are much smaller than full blocks.</p>
+            <strong>Wraith Protocol</strong>
+            <br>
+            <p>Wraith Protocol allows for fast, secure transactions by using technology called stealth addresses. This allows desired transactions go to seperate stealth addresses which sends the transaction to the reciever. This transaction is hidden on the ledger and impossible to trace. With Wraith Protocol, this functionality can be turned on and off for either private or transparent transactions.</p>
+            <strong>Atomic Swaps</strong>
+            <br>
+            <p>Atomic Swaps allow Verge to be used in DEX's (Decentralised Exchanges) which let you to trade between Verge, and other coins that have atomic swaps enabled, on a blockchain. This means that a company like Bittrex or CoinBase dont own your coins but are instead stored in a decentralised exchange like crypto-bridge.</p>
+            <strong>Mobile Security</strong>
+            <br>
+            <p>Verge is the first and only cryptocurrency to have an Android wallet with Tor integrated. This allows for IP masking and anonymity on the move. An i2p Androd wallet is expected in Q1 2018.</p>
+            <br>
+            <h1>Coming Soon</h1>
+            <strong>RingCT</strong>
+            <br>
+            <p>RingCT allows you to conceal how much you are sending over the blockchain. With ringCT enabled, when you send a transaction, more than one transaction is sent out of your address. These contain other funds from your address and act as dummy transactions to hide how much is actually being sent. The dummy transactions are then sent back to your address and the actual transaction is sent on to the reciever.</p>
+            <br>
+            <strong>RSK Smart Contracts</strong>
+            <br>
+            <p>RSK smart contracts allow Verge to utilise smart contracts on the blockchain. This will be enabled in Q1 this year and also allows Verge to handle 2000 transactions per second which is 20 times faster than what it is now. Below is an image which may help you understand what a Smart Contract is. </p>
+            <br>
+            <img style="width: 600px" src="Assets/contract.png">
+        </div>
+        <div class="jumbotron" id="nav3">
+            <h1>Why Choose Verge?</h1>
+            <table style="border-collapse: collapse">
+                <tr>
+                    <td style="border-right-style: solid">Privacy Coins</td>
+                    <td><strong style="text-decoration: underline"><img width="50px" src="Assets/Verge.png"></strong></td>
+                    <td><strong style="text-decoration: underline"><img width="50px" src="Assets/monero.svg"></strong></td>
+                    <td><strong style="text-decoration: underline"><img width="50px" src="Assets/zcash.png"></strong></td>
+                    <td><strong style="text-decoration: underline"><img width="50px" src="Assets/dash.png"></strong></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Symbol</td>
+                    <td>XVG</td>
+                    <td>XMR</td>
+                    <td>ZEC</td>
+                    <td>DASH</td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Max Supply</td>
+                    <td>16.5 Billion</td>
+                    <td>Infinite</td>
+                    <td>21 Million</td>
+                    <td>22 Million</td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Block Times</td>
+                    <td style="color: green">30 seconds</td>
+                    <td>2 Minutes</td>
+                    <td>2.5 Minutes</td>
+                    <td>2.5 Minutes</td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Transaction Capability (per second)</td>
+                    <td style="color: green">100 (2000 with RSK)</td>
+                    <td>Adaptive</td>
+                    <td>7-27</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Low Fees</td>
+                    <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Specialised Transaction Technology</td>
+                    <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Dedicated Tip Bots</td>
+                    <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Decentralised</td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">IP Masking</td>
+                    <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Multiple Mining Algorithms</td>
+                    <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Stealth Addresses</td>
+                    <td style="color: green"><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Atomic Swaps</td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Mobile Privacy</td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">Smart Contracts</td>
+                    <td style="color: green"><img src="Assets/soon1.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+                <tr>
+                    <td style="border-right-style: solid">RingCT's</td>
+                    <td style="color: green"><img src="Assets/soon1.png" style="width: 30px"></td>
+                    <td><img src="Assets/Yes.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                    <td><img src="Assets/No.png" style="width: 30px"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="jumbotron" id="nav4">
+            <h1>Community</h1>
+            <p>The Verge community is present on most social media platforms and the devs are very active on most. The marketing team is currently situated on Discord which is one of the best places to talk to the community and the team.</p>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/VERGEcurrency/"><img style="width: 100px" src="Assets/facebook.png"></a></li>
+                <li><a href="https://twitter.com/vergecurrency"><img style="width: 100px" src="Assets/twitter.png"></a></li>
+                <li><a href="https://www.reddit.com/r/vergecurrency/"><img style="width: 100px" src="Assets/Reddit.png"></a></li>
+                <li><a href="https://discordapp.com/invite/vergecurrency"><img style="width: 100px" src="Assets/discord.png"></a></li>
+                <li><a href="https://t.me/VERGExvg"><img style="width: 100px" src="Assets/telegram.png"></a></li>
+            </ul>
+        </div>
+        <div class="jumbotron" id="nav5">
+            <h1>Useful Guides</h1>
+            <p><a style="text-decoration: underline" href="https://warmwires.blog/2018/01/19/windows-electrum-wallet-setup/">Warmwires's</a> Tor Electrum wallet guide for windows is up to date and easy to follow.</p>
+            <br>
+            <p><a style="text-decoration: underline" href="Assets/wraithWalletGuide.pdf">Akashiro's</a> 4.0.1 QT wallet guide makes the wallet easy and quick to set up properly.</p>
+            <br>
+            <p><a style="text-decoration: underline" href="https://www.youtube.com/watch?v=R48e1mp_5qA&feature=youtu.be">XVG Monks's</a> MAC High Sierra wallet set-up video is a great video tutorial for MAC users.</p>
+            <br>
+            <p><a style="text-decoration: underline" href="Assets/StealthGuide.pdf">Akashiro's</a> guide for setting up and using stealth addresses shows you how to use stealth and how to check whether your stealth addresses are working as intended.</p>
+            <br>
+            <p><a style="text-decoration: underline" href="Assets/AndroidWalletguide.pdf">Akashiro</a> has yet another guide, this one on how to install and set up the Android Tor wallet.</p>
+        </div>
+        <div class="jumbotron" id="nav6">
+            <h1>FAQ</h1>
+            <strong style="text-decoration: underline">Q: What are the best Verge exchanges?</strong>
+            <p>A: Bittrex and Binance are the most popular and most reliable exchanges for Verge.</p>
+            <strong style="text-decoration: underline">Q: How do I use Atomic Swaps?</strong>
+            <p>A: There are many DEX's (Decentralised Exchanges) like crypto-bridge that allow you to use Atomic Swaps with Verge. </p>
+            <strong style="text-decoration: underline">Q: Is Verge a Dogecoin fork?</strong>
+            <p>A: No. While Verge was called Dogecoin Dark, it was actually forked from Bitcoin/Peercoin.</p>
+        </div>
+        <div class="jumbotron">
+            <h1>Articles</h1>
+            <p id="quotes" class="first"><i>"The currency is virtually untraceable and the users of Verge can make instant anonymous transactions."</i> - <a style="text-decoration: underline" href="https://www.thesun.co.uk/money/5180704/verge-price-today-buy-xvg-value-bitcoin/">The Sun</a></p>
+            <p id="quotes"><i>"You could buy yourself the full collection of My Little Pony that you have always wanted and no one would ever find out"</i> - <a style="text-decoration: underline" href="http://thecompletecoinguide.com/verge-it-was-us-against-the-world/">Thecompletecoinguide.com</a></p>
+            <p id="quotes"><i>"With significantly faster transaction times and capable of handling a vastly higher number of transactions per second, not to mention the increased privacy, the Verge platform is ready for mass adoption."</i> - <a style="text-decoration: underline" href="https://uk.finance.yahoo.com/news/buy-verge-xvg-ultimate-guide-114641773.html">Finance.yahoo.com</a></p>
+        </div>
+        <div class="jumbotron">
+            <h1>Useful links</h1>
+            <p class="first"><a style="text-decoration: underline" href="https://vergecurrency.com">VERGE Official Website</a></p>
+            <p class="first"><a style="text-decoration: underline" href="https://verge-blockchain.com/">VERGE Blockchain downloader</a></p>
+            <p class="first"><a style="text-decoration: underline" href="https://verge-blockchain.info/">VERGE Blockchain Explorer</a></p>
+        </div>
+        <footer>
+            <p style="text-align: center; padding-top: 50px;">I have made this website in my own time, for free.
+                <br>
+                <br> If you want to support me and this website, please donate to the addresses below.
+                <br>
+                <br>XVG: DS7vhhycfzsLHFoQJ4p4CwjgXoJxGKG4eX
+                <br>
+                <br>ETH: 0x5d9030bc44dde326e3d80884711fd10d9e336e78
+                <br>
+                <br>BTC: 1MZNU3y4H6AtFV3iHHRWz1UjkhpHck71kg</p>
+        </footer>
+    </div>
+</body>
+<script>
+</script>
 
-    <script>
-        
-    </script>
 </html>
-
-
-
