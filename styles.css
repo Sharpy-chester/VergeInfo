@@ -237,7 +237,7 @@ input{
         width: 33%;
         color: white;
         margin: auto;
-        transform: translate(-50px);
+        transform: translate(-100px);
         min-width: 33%;
         max-width: 50%;
     }
