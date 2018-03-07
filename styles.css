@@ -66,6 +66,7 @@
     table {
         margin-left: auto;
         margin-right: auto;
+        z-index: 0;
     }
 
     .coinmarketcap-currency-widget {
@@ -112,7 +113,8 @@
         position: sticky;
         top: 0;
         height: 65px;
-        width: 100%
+        width: 100%;
+        z-index: 1;
     }
 
     header:after {
