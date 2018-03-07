@@ -9,6 +9,9 @@
         overflow-x: hidden;
         overflow-y: scroll;
     }
+    body{
+        margin: 0;
+    }
     @font-face {
         font-family: testing;
         src: url(AvenirNext-Medium.woff);
