@@ -4,6 +4,8 @@
 <head>
     <link rel="icon" href="Assets/Verge.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -13,26 +15,34 @@
             <a href="#"><img style="padding-top: 15px" src="Assets/vergelogo1.png" class="logo"></a>
             <nav>
                 <ul class="nav">
-                    <li><a href="#nav1">What is Verge</a></li>
-                    <li><a href="#nav2">Features</a></li>
-                    <li><a href="#nav3">Why Choose Verge</a></li>
-                    <li><a href="#nav4">Community</a></li>
-                    <li><a href="#nav5">Useful Guides</a></li>
-                    <li><a href="#nav6">FAQ</a></li>
-                    <li><a href="#">News (WIP)</a></li>
+                    
+                    <label class="label" for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <div class="menu">
+                        <li><a data-toggle="collapse" class="nav-link scroll" href="#top">What is Verge</a></li>
+                        <li><a class="nav-link scroll" href="#nav2">Features</a></li>
+                        <li><a class="nav-link scroll" href="#nav3">Why Choose Verge</a></li>
+                        <li><a class="nav-link scroll" href="#nav4">Community</a></li>
+                        <li><a class="nav-link scroll" href="#nav5">Useful Guides</a></li>
+                        <li><a class="nav-link scroll" href="#nav6">FAQ</a></li>
+                        <li><a class="nav-link scroll" href="#">News (WIP)</a></li>
+                    
+                    </div>
+                    
                 </ul>
             </nav>
         </div>
     </header>
+    <br>
     <div class="content">
-        <div class="jumbotron" id="nav1">
-            <h1>What is Verge?</h1>
+        <div class="jumbotron" id="top">
+            <h1 style="padding-top: 50px">What is Verge?</h1>
             <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and most importantly, privacy. This is an unofficial website devoted to helping people understand what Verge is and why its so important in todays society.</p>
             <br>
             <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
-            <div style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
-        </div>
-        <div class="jumbotron" id="nav2">
+            <div  style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+        </div >
+        <div id="nav2" class="jumbotron">
             <h1>Features</h1>
             <p>Verge has many built-in features with many more to come this year. Heres a quick run-down of the main features and what they do.</p>
             <br>
@@ -41,16 +51,16 @@
             <p>Tor (The Onion Router) is a service that allows you to hide your identity by moving your traffic between many Tor servers and encrypting your data. It cannot be traced back to you as they would see the data originating from one of the Tor servers.</p>
             <strong>SPV</strong>
             <br>
-            <p>SPV stands for "Simple Payment Verification" which is technology that makes transactions take just 5-10 seconds on average. Instead of downloading a whole block, it verifies if a transaction is in a block and only has to download block headers which are much smaller than full blocks.</p>
+            <p>SPV stands for "Simple Payment Verification" which is technology that makes transactions take just 5-10 seconds on average. It does this by instead of downloading a whole block, it verifies if a transaction is in a block and only has to download block headers which are much smaller than full blocks.</p>
             <strong>Wraith Protocol</strong>
             <br>
-            <p>Wraith Protocol allows for fast, secure transactions by using technology called stealth addresses. This allows desired transactions to go to separate stealth addresses which forward the transaction to the receiver. This transaction is hidden on the ledger and impossible to trace. With Wraith Protocol, this functionality can be turned on and off for either private or transparent transactions.</p>
+            <p>Wraith Protocol allows for fast, secure transactions by using technology called stealth addresses. This allows desired transactions go to seperate stealth addresses which sends the transaction to the reciever. This transaction is hidden on the ledger and impossible to trace. With Wraith Protocol, this functionality can be turned on and off for either private or transparent transactions.</p>
             <strong>Atomic Swaps</strong>
             <br>
-            <p>Atomic Swaps allow Verge to be used in DEX's (Decentralised Exchanges) which let you trade between Verge, and other coins that have atomic swaps enabled, on a blockchain. This means that a company like Bittrex or CoinBase do not own your coins but are instead stored in a decentralised exchange like crypto-bridge.</p>
+            <p>Atomic Swaps allow Verge to be used in DEX's (Decentralised Exchanges) which let you to trade between Verge, and other coins that have atomic swaps enabled, on a blockchain. This means that a company like Bittrex or CoinBase dont own your coins but are instead stored in a decentralised exchange like crypto-bridge.</p>
             <strong>Mobile Security</strong>
             <br>
-            <p>Verge is the first and only cryptocurrency to have an Android wallet with Tor integrated. This allows for IP masking and anonymity on the move. An i2p Android wallet is expected in Q1 2018.</p>
+            <p>Verge is the first and only cryptocurrency to have an Android wallet with Tor integrated. This allows for IP masking and anonymity on the move. An i2p Androd wallet is expected in Q1 2018.</p>
             <br>
             <h1>Coming Soon</h1>
             <strong>RingCT</strong>
@@ -59,9 +69,9 @@
             <br>
             <strong>RSK Smart Contracts</strong>
             <br>
-            <p>RSK smart contracts allow Verge to utilise smart contracts on the blockchain. This will be enabled in Q1 this year and also allows Verge to handle 2000 transactions per second which is 20 times more than what it is now. Below is an image which may help you understand what a Smart Contract is. </p>
+            <p>RSK smart contracts allow Verge to utilise smart contracts on the blockchain. This will be enabled in Q2 this year and also allows Verge to handle 2000 transactions per second which is 20 times faster than what it is now. Below is an image which may help you understand what a Smart Contract is. </p>
             <br>
-            <img style="width: 600px" src="Assets/contract.png">
+            <img class="img" src="Assets/contract.png">
         </div>
         <div class="jumbotron" id="nav3">
             <h1>Why Choose Verge?</h1>
@@ -197,7 +207,7 @@
             <br>
             <p><a style="text-decoration: underline" href="Assets/wraithWalletGuide.pdf">Akashiro's</a> 4.0.1 QT wallet guide makes the wallet easy and quick to set up properly.</p>
             <br>
-            <p><a style="text-decoration: underline" href="https://www.youtube.com/watch?v=R48e1mp_5qA&feature=youtu.be">XVG Monks's</a> MAC High Sierra wallet set-up video is a great video tutorial for MAC users.</p>
+            <p><a style="text-decoration: underline" href="https://www.youtube.com/channel/UC_SrUj8cu9F-OzWuLJ-oldQ/videos?disable_polymer=1">XVG Monk</a> has many tutorials on his YouTube channel that can help you set up your QT wallet.</p>
             <br>
             <p><a style="text-decoration: underline" href="Assets/StealthGuide.pdf">Akashiro's</a> guide for setting up and using stealth addresses shows you how to use stealth and how to check whether your stealth addresses are working as intended.</p>
             <br>
@@ -223,9 +233,19 @@
             <p class="first"><a style="text-decoration: underline" href="https://vergecurrency.com">VERGE Official Website</a></p>
             <p class="first"><a style="text-decoration: underline" href="https://verge-blockchain.com/">VERGE Blockchain downloader</a></p>
             <p class="first"><a style="text-decoration: underline" href="https://verge-blockchain.info/">VERGE Blockchain Explorer</a></p>
+            <p class="first"><a style="text-decoration: underline" href="http://www.xvgmag.com/">XVG Mag</a></p>
+        </div>
+        <div class="jumbotron">
+            <h1>Contributors</h1>
+            <strong><a href="https://twitter.com/SharpyChester">Sharpy</a></strong>
+            <p>Creator, Owner and Developer of VergeInfo.net.</p>
+            <strong><a href="https://twitter.com/cabrasm_fr">Cabrasm</a></strong>
+            <p>Website Designer/Developer</p>
+            <strong><a href="https://twitter.com/VergeBull">Verge Bull</a></strong>
+            <p>Proof Reading</p>
         </div>
         <footer>
-            <p style="text-align: center; padding-top: 50px;">I have made this website in my own time, for free.
+            <p>I have made this website in my own time, for free.
                 <br>
                 <br> If you want to support me and this website, please donate to the addresses below.
                 <br>
@@ -236,8 +256,36 @@
                 <br>BTC: 1MZNU3y4H6AtFV3iHHRWz1UjkhpHck71kg</p>
         </footer>
     </div>
-</body>
-<script>
+    <script>
+        $(document).ready(function() {
+  
+            var scrollLink = $('.scroll');
+            scrollLink.click(function(e) {
+                e.preventDefault();
+                $('body,html').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000 );
+            });
+
+            $(window).scroll(function() {
+                var scrollbarLocation = $(this).scrollTop();
+    
+                scrollLink.each(function() {
+      
+                    var sectionOffset = $(this.hash).offset().top - 50;
+       
+                    if ( sectionOffset <= scrollbarLocation ) {
+                        $(this).parent().addClass('active');
+                        $(this).parent().siblings().removeClass('active');
+                    }
+                })
+    
+            })
+  
+        })
 </script>
+
+</body>
+
 
 </html>
