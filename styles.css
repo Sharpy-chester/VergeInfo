@@ -6,6 +6,8 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
     @font-face {
         font-family: testing;
