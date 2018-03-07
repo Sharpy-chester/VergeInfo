@@ -138,6 +138,9 @@
         display: inline-block;
         padding: 25px 20px;
     }
+td img{
+    z-index: 0;
+}
 .icon{
     display: none;
     float: right;
@@ -173,6 +176,10 @@
 
 input{
     display: none;
+}
+.large{
+   transform: translateY(-10px);
+    font-size: 12px
 }
 .label{
     display: none;
@@ -211,7 +218,6 @@ input{
     table{
         margin-left: -40px;
         margin-right: auto;
-        max-width: 90px;
     }
     p{
         padding: 0 0px;
@@ -262,13 +268,14 @@ input{
         padding: 10px;
         margin-top: 10px;
     }
+
     tr td{
-        
+        max-width: 80px;
         transform: scale(0.8);
         padding: 0;
         margin: 0;
         border-collapse: collapse;
-        border-spacing: 0;
+        border-spacing: 0px;
     }
     
 }
