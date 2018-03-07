@@ -1,7 +1,7 @@
 
 
     html {
-        background: url(Assets/Background2.gif) no-repeat center center fixed;
+        background: url(Assets/background2.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -126,7 +126,11 @@
         color: #08b4e0;
         transition: all ease-in-out 200ms;
     }
-
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 25px 20px;
+    }
     ul li {
         list-style-type: none;
         display: inline-block;
@@ -187,6 +191,9 @@ input{
     margin: 0 10px;
 
 }
+.images{
+    width: 100px;
+}
 @media only screen and (max-width:1330px){
     .label{
         display: block;
@@ -200,7 +207,7 @@ input{
         max-width: 80%
     }
     table{
-        margin-left: auto;
+        margin-left: -40px;
         margin-right: auto;
         max-width: 90px;
     }
@@ -231,7 +238,7 @@ input{
         border-top-width: 0;
     }
     .img{
-        width: 80%
+        width: 100%
     }
     .coinmarketcap-currency-widget {
         width: 33%;
@@ -241,7 +248,27 @@ input{
         min-width: 33%;
         max-width: 50%;
     }
-
+    .images{
+        
+        width: 50px;
+        padding: 0 0;
+        margin: auto;
+    }
+    ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    tr td{
+        
+        transform: scale(0.8);
+        padding: 0;
+        margin: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
 }
 
 
