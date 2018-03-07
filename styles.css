@@ -11,8 +11,6 @@
     }
     body{
         margin: 0;
-        position: static;
-        overflow:hidden
     }
     @font-face {
         font-family: testing;
