@@ -181,10 +181,7 @@ td img{
 input{
     display: none;
 }
-.large{
-   transform: translateY(-10px);
-    font-size: 12px
-}
+
 .label{
     display: none;
     float: top;
@@ -280,6 +277,10 @@ input{
         margin: 0;
         border-collapse: collapse;
         border-spacing: 0px;
+    }
+    .large{
+        transform: translateY(-10px);
+        font-size: 12px
     }
     
 }
