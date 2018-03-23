@@ -6,6 +6,34 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="jquery-3.3.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        getText = function(url, callback) // How can I use this callback?
+        {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function()
+            {
+                if (request.readyState == 4 && request.status == 200)
+                    {
+                        callback(request.responseText); // Another callback here
+                    }
+                }; 
+            request.open('GET', url);
+            request.send();
+        }
+
+        function mycallback(data) {
+            console.log("Donation status : " + data);
+            document.getElementById("donationStatus").innerHTML = Math.round(data * 100) / 100;
+
+            percent = (data * 100) / 75000000 ;
+            document.getElementById("percentageAchieved").innerHTML = Math.round(percent * 100) / 100;
+
+
+        }
+
+        getText('https://verge-blockchain.info/ext/getbalance/DLv25ww5CipJngsKMYemBTBWH14CUpucxX', mycallback); //passing mycallback as a method
+    </script>
 </head>
 
 <body>
@@ -41,6 +69,23 @@
             <br>
             <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
             <div  style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+        </div >
+        <div class="jumbotron" id="top">
+            <h1>DONATE</h1>
+            <p>Verge never pre-mined his own currency nor did an ICO to get financed. We are currently trying to raise 75M XVG for the following points : <br />
+                <ul>
+                    <li><strong>Ledger Nano hardware</strong> wallet integration and support</li> <br>
+                    <li>Wraith protocol <strong>iOS enabled wallet</strong> applications</li><br>
+                    <li>Advanced Marketing tactics which <strong>span the globe</strong></li><br>
+                    <li><strong>Partnerships with large scale companies</strong></li><br>
+                    <li><strong>Real world adoption</strong></li><br>
+                  </ul>
+                  <a href="https://vergecurrency.com/donate"><h1>More details and official donation address here : https://vergecurrency.com/donate</h1></a><br />
+            </p>
+            <h1> Donation status <span id="donationStatus"></span> / 75000000 XVG </h1> <br />
+            <h1>Percentage achieved : <span id="percentageAchieved"></span> %</h1>
+            
+            <br>
         </div >
         <div id="nav2" class="jumbotron">
             <h1>Features</h1>
@@ -239,7 +284,7 @@
             <h1>Contributors</h1>
             <strong><a href="https://twitter.com/SharpyChester">Sharpy</a></strong>
             <p>Creator, Owner and Developer of VergeInfo.net.</p>
-            <strong><a href="https://twitter.com/cabrasm_fr">Cabrasm</a></strong>
+            <strong><a href="https://github.com/cabrasm">Cabrasm</a></strong>
             <p>Website Designer/Developer</p>
             <strong><a href="https://twitter.com/VergeBull">Verge Bull</a></strong>
             <p>Proof Reading</p>

@@ -142,6 +142,7 @@
         list-style-type: none;
         display: inline-block;
         padding: 25px 20px;
+        color : white;
     }
 td img{
     z-index: 0;
