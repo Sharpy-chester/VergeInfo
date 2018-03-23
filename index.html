@@ -11,15 +11,18 @@
         getText = function(url, callback) // How can I use this callback?
         {
             var request = new XMLHttpRequest();
+            
             request.onreadystatechange = function()
             {
                 if (request.readyState == 4 && request.status == 200)
                     {
-                        callback(request.responseText); // Another callback here
+                        var balance = JSON.parse(request.responseText);
+                        callback(balance.balance); // Another callback here
                     }
                 }; 
-            request.open('GET', url);
-            request.send();
+            request.open('GET', url, false);
+            request.setRequestHeader("Content-type", "application/json");
+            request.send(null);
         }
 
         function mycallback(data) {
@@ -32,7 +35,7 @@
 
         }
 
-        getText('https://verge-blockchain.info/ext/getbalance/DLv25ww5CipJngsKMYemBTBWH14CUpucxX', mycallback); //passing mycallback as a method
+        getText('http://api.yiimp.eu/api/wallet?address=DLv25ww5CipJngsKMYemBTBWH14CUpucxX', mycallback); //passing mycallback as a method
     </script>
 </head>
 
