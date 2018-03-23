@@ -1,17 +1,16 @@
-@media screen  {
+
 
     html {
-
-        background: url(Assets/Background2.jpg) no-repeat center center fixed;
-
+        background: url(Assets/Background2.gif) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        margin: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
-    body {
-        margin : 0;
+    body{
+        margin: 0;
     }
     @font-face {
         font-family: testing;
@@ -24,37 +23,12 @@
         position: static;
         min-height: 300px;
         transform-style: inherit;
-    }
-
-    #sec2 {
-        /*background-image: url(Assets/concert.png);*/
-        background-color: rgba(31, 48, 56, 0.9);
-
-        background-repeat: no-repeat;
-        height: 600px;
-        box-shadow: 0 4px 50px 10px;
-    }
-
-
-    #sec3 {
-        height: 800px;
-    }
-
-
-    .bgImage {
-        opacity: 0.6;
+        max-width: 100%;
     }
 
     h1 {
-        /*                font-family: Verdana, Geneva, sans-serif;*/
         color: white;
     }
-
-    iframe {
-
-        box-shadow: 0 4px 50px 10px;
-    }
-
     a {
         text-decoration: none;
         text-decoration-line: none;
@@ -65,40 +39,22 @@
     p {
         color: white;
         padding: 0px 150px;
-    }
-
-    button {
-        height: 50px;
-        width: 200px;
-        background-color: dodgerblue;
-        border-style: none;
-        box-shadow: 0 0px 50px 1px;
-    }
-
-    h2 {
-        color: white;
+        
     }
 
     #quotes {
         padding: 30px 150px;
     }
-
-    .first {
-        top: 100px;
-    }
-
     strong {
         color: white;
     }
 
     .img {
-        float: right;
-        width: 520px;
+        width: 40%;
     }
 
     .icons {
         margin-top: -20px;
-        display: inline-block
     }
 
     td {
@@ -115,14 +71,16 @@
     table {
         margin-left: auto;
         margin-right: auto;
+        z-index: 0;
     }
 
     .coinmarketcap-currency-widget {
         width: 33%;
         color: white;
-        margin: 0 auto;
+        margin: auto;
+        min-width: 33%;
+        max-width: 50%;
     }
-
 
 
     .nav {
@@ -151,14 +109,17 @@
     .logo {
         float: left;
         padding: 20px 0;
+        display: inline-block;
     }
 
     header {
-        background-color: rgba(26, 39, 49, 0.9);
+        background-color: rgba(31, 48, 56, 0.9);
         box-shadow: 0 0px 10px 5px;
         position: sticky;
         top: 0;
         height: 65px;
+        width: 100%;
+        z-index: 1;
     }
 
     header:after {
@@ -172,20 +133,30 @@
         color: #08b4e0;
         transition: all ease-in-out 200ms;
     }
-
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 25px 20px;
+    }
     ul li {
         list-style-type: none;
         display: inline-block;
         padding: 25px 20px;
     }
-
-
-    .article {}
+td img{
+    z-index: 0;
+}
+.icon{
+    display: none;
+    float: right;
+    padding-top: 20px;
+    padding-right: 30px;
+    
+}
 
     .jumbotron {
-        width: 100%;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        width: 98%;
+        padding: 40px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -198,5 +169,122 @@
         background-color: rgba(31, 48, 56, 1);
         height: 300px;
         box-shadow: 0 4px 50px 10px;
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+        margin-right: -50px;
+        margin-top: 20px;
+        padding-right: 0px;
+        min-height: 400px;
+        max-width: 100%;
     }
+input{
+    display: none;
 }
+
+.label{
+    display: none;
+    float: top;
+    float: right;
+    display: none;
+    color: white;
+    margin-top: -52px;
+    font-size: 20px;
+}
+.menu{
+
+    width: 100%;
+}
+.menu li{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+
+}
+.images{
+    width: 100px;
+}
+@media only screen and (max-width:1330px){
+    .label{
+        display: block;
+        cursor: pointer;
+    }
+    .nav{
+        text-align: center;
+        width: 100%;
+    }
+    .jumbotron{
+        max-width: 80%
+    }
+    table{
+        margin-left: -40px;
+        margin-right: auto;
+    }
+    p{
+        padding: 0 0px;
+    }
+    strong{
+        padding: 0 0;
+    }
+    #quotes{
+        padding: 0 0;
+    }
+    .nav li{
+        display: block;
+        margin: 0;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+    .menu{
+        background-color: rgba(31, 48, 56, 1);
+        margin-top: -5px;
+        display: none;
+        border-style: solid;
+        border-color: dodgerblue;
+        
+        border-width: 1px;
+        border-top-width: 0;
+    }
+    .img{
+        width: 100%
+    }
+    .coinmarketcap-currency-widget {
+        width: 33%;
+        color: white;
+        margin: auto;
+        transform: translate(-100px);
+        min-width: 33%;
+        max-width: 50%;
+    }
+    .images{
+        
+        width: 50px;
+        padding: 0 0;
+        margin: auto;
+    }
+    ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    tr td{
+        max-width: 80px;
+        transform: scale(0.8);
+        padding: 0;
+        margin: 0;
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+    .large{
+        transform: translateY(-10px);
+        font-size: 12px
+    }
+    
+}
+
+
+
+        
