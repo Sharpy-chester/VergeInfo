@@ -293,6 +293,12 @@ input{
     }
     
 }
+@media only screen and (max-width:900px){
+    .vid{
+        width: 320px;
+        height: 180px;
+    }
+}
 
 
 
