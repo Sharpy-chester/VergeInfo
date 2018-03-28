@@ -211,8 +211,8 @@ input{
 }
 @media only screen and (max-width:1330px){
     .vid{
-        width: 320px;
-        height: 180px;
+        max-width: 304px;
+        height: 171px;
     }
     .label{
         display: block;
