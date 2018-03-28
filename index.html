@@ -7,35 +7,34 @@
     <script src="jquery-3.3.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-
-        getText = function(url, callback) // How can I use this callback?
-        {
-            var request = new XMLHttpRequest();
-            
-            request.onreadystatechange = function()
-            {
-                if (request.readyState == 4 && request.status == 200)
-                    {
-                        var balance = JSON.parse(request.responseText);
-                        callback(balance.balance); // Another callback here
-                    }
-                }; 
-            request.open('GET', url, false);
-            request.setRequestHeader("Content-type", "application/json");
-            request.send(null);
-        }
-
-        function mycallback(data) {
-            console.log("Donation status : " + data);
-            document.getElementById("donationStatus").innerHTML = Math.round(data * 100) / 100;
-
-            percent = (data * 100) / 75000000 ;
-            document.getElementById("percentageAchieved").innerHTML = Math.round(percent * 100) / 100;
-
-
-        }
-
-        getText('http://api.yiimp.eu/api/wallet?address=DLv25ww5CipJngsKMYemBTBWH14CUpucxX', mycallback); //passing mycallback as a method
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 16, 2018 17:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get todays date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("count").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("count").innerHTML = "ANNOUNCEMENT DONE. LINK TO OFFICIAL VIDEO COMING SOON.";
+      }
+    }, 1000);
     </script>
 </head>
 
@@ -69,26 +68,24 @@
     <div class="content">
         <div class="jumbotron" id="top">
             <h1>What is Verge?</h1>
-            <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and most importantly, privacy. This is an unofficial website devoted to helping people understand what Verge is and why its so important in todays society.</p>
+            <p>Verge is an open source, community driven cryptocurrency that focuses on speed, technology, and most importantly, privacy. This is an unofficial website devoted to helping people understand what Verge is and why it's so important in todays society.</p>
             <br>
             <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
             <div  style="" class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
         </div >
-        <div class="jumbotron" id="top">
-            <h1>DONATE</h1>
-            <p>Verge never pre-mined his own currency nor did an ICO to get financed. We are currently trying to raise 75M XVG for the following points : <br />
-                <ul>
-                    <li><strong>Ledger Nano hardware</strong> wallet integration and support</li> <br>
-                    <li>Wraith protocol <strong>iOS enabled wallet</strong> applications</li><br>
-                    <li>Advanced Marketing tactics which <strong>span the globe</strong></li><br>
-                    <li><strong>Partnerships with large scale companies</strong></li><br>
-                    <li><strong>Real world adoption</strong></li><br>
-                  </ul>
-                  <a href="https://vergecurrency.com/donate"><h1>More details and official donation address here : https://vergecurrency.com/donate</h1></a><br />
+        <div class="jumbotron" id="donate">
+            <h1>PARTNERSHIP CONFIRMED</h1>
+            <p>Verge successfully completed its crowdfunding campaign to get an important partnership that will definitely change Verge and Cryptocurrency world. <br /><br />
+            As Sunerok, Verge lead developer of VERGEcurrency project signed an NDA and there is some preparation from both sides (Verge integration, press release),<br /> <br />
+            the partner will be announced on April, 16th 2018. Here the video from official VERGEcurrency channel announcing the successful partnership : <br /><br />
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/7-LQoskTbqc" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+            <br /> <br />
+            <h1 style="font-size: 28pt">Partner announcement countdown : <span id="count"></span></h1> <br /> </p>
+            <p>
+            Even if crowdfunding is done, you can still donate to Verge to continue development, such as RingCT integration, RSK, the iOS wallet.
+            As a reminder, Verge isn't a company and decided to not premine his coins nor do an ICO, it runs with development team funds and your donations.  <br />    <br />   
+            <a href="https://vergecurrency.com/donate" style="font-size: 18pt">More details and official donation address here : https://vergecurrency.com/donate</a><br />
             </p>
-          <!--  <h1> Donation status <span id="donationStatus"></span> / 75000000 XVG </h1> <br />
-            <h1>Percentage achieved : <span id="percentageAchieved"></span> %</h1> -->
-            
             <br>
         </div >
         <div id="nav2" class="jumbotron">
