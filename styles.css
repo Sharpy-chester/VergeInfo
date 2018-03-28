@@ -205,7 +205,15 @@ input{
 .images{
     width: 100px;
 }
+.vid{
+    width: 854px;
+    height: 480px;
+}
 @media only screen and (max-width:1330px){
+    .vid{
+        width: 384px;
+        height: 216px;
+    }
     .label{
         display: block;
         cursor: pointer;
